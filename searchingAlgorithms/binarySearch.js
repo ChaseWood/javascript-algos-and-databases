@@ -5,6 +5,7 @@
 // left pointer at 0 right pointer at end of array
 
 // BIG O
+// Time Complexity
 // Worst - O(log n) - Best O(1) if lucky with middle
 
 const binarySearch = (arr, elem) => {
