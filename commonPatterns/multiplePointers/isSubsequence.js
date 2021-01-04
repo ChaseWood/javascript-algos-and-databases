@@ -12,3 +12,21 @@
 // Time Complexity - O(N + M)
 
 // Space Complexity - O(1)
+
+const isSubsequence = (str1, str2) => {
+	let i = 0;
+	let j = 0;
+	while (j < str2.length) {
+		let val1 = str1[i];
+		let val2 = str2[j];
+		if (val1 === val2) i++;
+		if (i === str1.length) return true;
+		j++;
+	}
+	return false;
+};
+
+console.log(isSubsequence('hello', 'hello world'));
+console.log(isSubsequence('sing', 'sting'));
+console.log(isSubsequence('abc', 'abracadabra'));
+console.log(isSubsequence('abc', 'acb'));
