@@ -1,4 +1,4 @@
-// Divide and Conquer
+// Divide and Conquer - Binary Search
 // Only works on sorted arrays
 // takes the midpoint and looks if desired input is left or right of midpoint
 // then only looks at the left or right after it decides which it needs
