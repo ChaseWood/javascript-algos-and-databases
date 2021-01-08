@@ -13,7 +13,6 @@
 // repeat until the array is sorted
 
 const insertionSort = (arr) => {
-	4;
 	for (var i = 1; i < arr.length; i++) {
 		let currentVal = arr[i];
 		for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
