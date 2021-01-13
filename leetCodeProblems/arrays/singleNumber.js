@@ -21,6 +21,7 @@
 // Each element in the array appears twice except for one element which appears only once.
 
 const singleNumber = (nums) => {
+	let collection = {};
 	for (let i = 0; i < nums.length; i++) {
 		collection[nums[i]] = (collection[nums[i]] || 0) + 1;
 		console.log(collection);
