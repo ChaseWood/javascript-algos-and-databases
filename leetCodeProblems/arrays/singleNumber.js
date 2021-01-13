@@ -23,15 +23,17 @@
 const singleNumber = (nums) => {
 	let collection = {};
 	for (let i = 0; i < nums.length; i++) {
-		collection[nums[i]] = (collection[nums[i]] || 0) + 1;
-		console.log(collection);
+		if (!collection[nums[i]]) {
+			collection[nums[i]] = 1;
+		} else {
+			collection[nums[i]]++;
+		}
 	}
 	for (let key in collection) {
 		if (collection[key] === 1) {
 			return key;
 		}
 	}
-	return false;
 };
 
 console.log(singleNumber([1, 1, 3, 3, 2, 2, 5]));
