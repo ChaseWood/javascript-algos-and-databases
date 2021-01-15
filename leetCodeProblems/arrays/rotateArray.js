@@ -26,3 +26,21 @@
 // 1 <= nums.length <= 2 * 104
 // -231 <= nums[i] <= 231 - 1
 // 0 <= k <= 105
+
+const rotate = (nums, k) => {
+	let collect = [];
+	let counter = nums.length - 1;
+	for (let i = nums.length - 1; i >= nums.length - k; i--) {
+		collect.unshift(nums[i]);
+	}
+	for (let j = nums.length - 1 - k; j >= 0; j--) {
+		nums[counter] = nums[j];
+		counter--;
+	}
+	for (let k = 0; k < collect.length; k++) {
+		nums[k] = collect[k];
+	}
+	return nums;
+};
+
+console.log(rotate([1, 2, 3, 4, 5, 6, 7], 3));
